@@ -6,6 +6,10 @@ import threading
 # Import socket module
 import socket
 from random import randint
+from random import seed
+
+seed(10)
+
 
 import time
 localTime = [time.time()]
@@ -84,11 +88,11 @@ def Main():
 	start_new_thread(thread_clock, ())
 
 	# local host IP '127.0.0.1'
-	host_send = '127.0.0.1'
+	host_send = '10.104.1.131'
 	port_send = 8000
 
 	# local host
-	host_recv = '127.0.0.1'
+	host_recv = '10.104.1.151'
 	port_recv = 8001
 
 	

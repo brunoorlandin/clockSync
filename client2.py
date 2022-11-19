@@ -84,11 +84,11 @@ def Main():
 	start_new_thread(thread_clock, ())
 
 	# local host IP '127.0.0.1'
-	host_send = '127.0.0.1'
+	host_send = '10.104.1.131'
 	port_send = 8000
 
 	# local host
-	host_recv = '127.0.0.1'
+	host_recv = '10.104.1.150'
 	port_recv = 8002
 
 	

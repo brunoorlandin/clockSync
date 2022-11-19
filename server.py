@@ -123,8 +123,8 @@ def Main():
 
 	host = ""
 
-	processos.append(['127.0.0.1',8001])
-	#processos.append(['127.0.0.1',8002])
+	processos.append(['10.104.1.151',8001])
+	processos.append(['10.104.1.150',8002])
  
 	# reserve a port on your computer
 	# in our case it is 12345 but it
