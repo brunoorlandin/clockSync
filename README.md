@@ -1,6 +1,6 @@
 # Sincronização de Sistemas
 
-## Dupla:
+## Dupla
 - Bruno Vallone Orlandin R.A.: 22.219.032-4
 - Eiji Kasai Dogen R.A.: 22.219.027-4
 
