@@ -22,13 +22,13 @@ cd clockSync
 Em linhas de comando separadas executar
 
 ```bash
-$ python serverPython.py
+python serverPython.py
 ```
 ```bash
-$ python clientPython.py
+python clientPython.py
 ```
 ```bash
-$ java Client.java
+java Client.java
 ```
 --- 
 Licença MIT ©
