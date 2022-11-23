@@ -172,7 +172,7 @@ def Main():
 	port = 8000
 
 	# Adiciona os endereços e portas de cada cliente à lista processos
-	# processos.append(['127.0.0.1',8001])
+	processos.append(['127.0.0.1',8001])
 	processos.append(['127.0.0.1',8002])
  
 	# Cria um socket para ouvir e receber envios de temperatura dos clientes
