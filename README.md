@@ -19,6 +19,8 @@ git clone https://github.com/brunoorlandin/clockSync.git
 cd clockSync
 ```
 
+Por padrão os processos rodarão localmente. Para altera-los, para testes em máquinas diferentes, siga as instruções abaixo:
+
 Para os testes, alterar as linhas 175 e 176 do serverPython.py para os ips das máquinas na rede local da qual queira rodar. O processo da linha 175 é referente ao processo do Java (Client.java) e o processo da linha 176 é o processo c++ (client.cpp.)
 
 No arquivo Client.java alterar na linha 18 para o ip da máquina em que será rodado o processo responsável (serverPython.py). Também no arquivo Client.java alterar na linha 22 o ip para o ip da máquina executara o processo java.
