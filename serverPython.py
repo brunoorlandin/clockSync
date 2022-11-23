@@ -138,22 +138,29 @@ def threaded(c):
 
 # Thread de clock do processo
 def thread_clock():
-	count = 0
+	count = 0.0
 	hz = 0.5
+
 	while True:
+		
+		# Aguarda 0.5 segundos
 		time.sleep(hz)
-		if ((count > 15 and randint(0,1)) or count > 20):
-			'''
-			if (randint(0,1)):
-				localTime[0]-= 1
-			else: 
-				localTime[0]+= 3
-			'''
-			count = 0
-			localTime[0]+=hz
-		else:
-			localTime[0]+=hz
-			count += hz
+
+		# Adiciona 0.5 no relogio local e no counter
+		localTime[0]+=hz
+		count += hz
+
+		# Após 10 segundos, há 33% de chance de ser adicionado ou removido 2 segundos ao invez do padrao 0.5
+		if (count > 10.0 and randint(0,2) == 0):
+			
+			count = 0.0
+
+			if (randint(0,1) == 0):
+				localTime[0]+= 2.0
+				print("\nANOMALIA OCORREU! +2 segundos!\n")
+			else:
+				localTime[0]-= 2.0
+				print("\nANOMALIA OCORREU! -2 segundos!\n")
 
  
 def Main():
