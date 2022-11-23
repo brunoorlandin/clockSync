@@ -18,6 +18,13 @@ git clone https://github.com/brunoorlandin/clockSync.git
 ```bash
 cd clockSync
 ```
+
+Para os testes, alterar as linhas 175 e 176 do serverPython.py para os ips das máquinas na rede local da qual queira rodar. O processo da linha 175 é referente ao processo do Java (Client.java) e o processo da linha 176 é o processo c++ (client.cpp.)
+
+No arquivo Client.java alterar na linha 18 para o ip da máquina em que será rodado o processo responsável (serverPython.py). Também no arquivo Client.java alterar na linha 22 o ip para o ip da máquina executara o processo java.
+
+No arquivo client.cpp, na linha 48 alterar ip para o ip de rede da máquina que rodará o processo responsável (serverPython.py)
+
 ## Executar processos
 Em linhas de comando separadas executar
 
@@ -29,6 +36,10 @@ python clientPython.py
 ```
 ```bash
 java Client.java
+```
+```bash
+g++ -std=c++11 -pthread client.cpp -o client
+./client
 ```
 --- 
 Licença MIT ©
