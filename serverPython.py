@@ -58,6 +58,7 @@ def threaded(c):
 	
 	# Obtem a informação, libera o lock e fecha a conexão
 	data = c.recv(1024).decode()
+	# data = c.recv(1024)
 	#data = c.recv(1024)
 	print_lock.release()
 	c.close()
@@ -75,7 +76,7 @@ def threaded(c):
 	diff = float(localTime[0]) - float(msg[1])
 	
 	# Se a diferença for maior que 1, iniciar processo de atualização
-	if (diff > 1 or diff < -1 or True):
+	if (diff > 1 or diff < -1):
 		print("\nDiferença de time: {}".format(diff))
 		print("Discrepancia detectada.\n")
 
@@ -164,7 +165,7 @@ def Main():
 	port = 8000
 
 	# Adiciona os endereços e portas de cada cliente à lista processos
-	processos.append(['127.0.0.1',8001])
+	# processos.append(['127.0.0.1',8001])
 	processos.append(['127.0.0.1',8002])
  
 	# Cria um socket para ouvir e receber envios de temperatura dos clientes
